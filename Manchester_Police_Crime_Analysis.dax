@@ -1,0 +1,15 @@
+Total Cases =
+COUNTROWS('Crime Data')
+
+Case Resolution Rate =
+DIVIDE(
+    [Resolved Cases],
+    [Total Cases],
+    0
+)
+
+Total Under Investigation =
+CALCULATE(
+    [Total Cases],
+    'Crime Data'[Status] = "Under Investigation"
+)
